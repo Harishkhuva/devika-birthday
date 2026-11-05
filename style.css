@@ -1,0 +1,95 @@
+* { box-sizing: border-box; }
+:root { --paper:#f5edda; --ink:#20201d; --orange:#f15b35; --blue:#3858c8; --yellow:#f3c94f; --pink:#f0a8a0; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif; overflow-x:hidden; }
+.grain { position:fixed; inset:0; pointer-events:none; z-index:20; opacity:.11; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E"); }
+.top { height:76px; padding:0 5.5%; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #20201d30; position:relative; z-index:2; }
+.logo { color:var(--ink); text-decoration:none; font-weight:800; font-size:23px; letter-spacing:-2px; }
+.logo span { color:var(--orange); font-size:17px; margin:0 3px; }
+.top-note,.date-stamp,.section-label,.hero-meta,.scroll-cue,.card-index,footer,.closing-sign { font:500 10px 'DM Mono',monospace; letter-spacing:1.4px; }
+.top-note span { color:var(--orange); padding:0 7px; }
+.date-stamp { border:1px solid var(--ink); padding:8px 11px; border-radius:2px; }
+.hero { min-height:690px; padding:65px 9% 55px; position:relative; overflow:hidden; }
+.hero-meta { display:flex; align-items:center; gap:10px; }
+.dot { width:8px; height:8px; background:var(--orange); border-radius:50%; display:inline-block; }
+.hero-title-wrap { position:relative; z-index:1; width:max-content; margin:42px 0 0 5%; }
+.small-intro { font:500 12px 'DM Mono',monospace; letter-spacing:4px; margin:0 0 9px 8px; }
+h1 { font-size:clamp(90px,15vw,190px); line-height:.77; letter-spacing:-.105em; margin:0; font-weight:800; }
+h1 em { color:var(--orange); font-family:'Playfair Display',serif; font-weight:800; letter-spacing:-.09em; }
+.year-burst { position:absolute; right:-155px; top:30px; background:var(--yellow); width:112px; height:112px; border-radius:50%; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; transform:rotate(12deg); font:500 10px/1.3 'DM Mono'; }
+.year-burst b { font-size:19px; }
+.hero-description { width:340px; margin:35px 0 0 6%; font-size:14px; line-height:1.8; }
+.scroll-cue { display:inline-block; margin:34px 0 0 6%; text-decoration:none; color:var(--ink); border-bottom:1px solid var(--orange); padding-bottom:7px; }
+.scroll-cue span { color:var(--orange); font-size:16px; margin-left:12px; }
+.hero-sticker { position:absolute; display:grid; place-items:center; }
+.sticker-cake { right:17%; top:19%; background:var(--pink); width:120px; height:120px; border-radius:50%; font-size:54px; transform:rotate(12deg); box-shadow:5px 7px 0 var(--ink); }
+.sticker-cake small { position:absolute; right:-12px; bottom:0; background:var(--yellow); padding:6px 9px; font:700 10px 'DM Mono'; transform:rotate(-13deg); }
+.sticker-star { right:8%; top:49%; color:var(--orange); font-size:90px; transform:rotate(15deg); }
+.sticker-doodle { right:22%; bottom:12%; width:100px; height:100px; border:1px solid var(--blue); border-radius:50%; color:var(--blue); text-align:center; font:500 11px/1.4 'DM Mono'; transform:rotate(-14deg); }
+.food-sticker { position:absolute; display:flex; align-items:center; gap:8px; font:500 9px 'DM Mono'; letter-spacing:1px; }
+.food-sticker.pizza { right:7%; top:20%; transform:rotate(-10deg); }
+.food-sticker.dosa { right:5%; bottom:15%; transform:rotate(8deg); }
+.food-sticker span { background:var(--ink); color:var(--paper); padding:6px 8px; }
+.food-sticker { font-size:26px; }
+.food-sticker span { font-size:9px; }
+.hero-side-note { position:absolute; right:4%; top:47%; writing-mode:vertical-rl; font:500 9px/1.7 'DM Mono'; letter-spacing:2px; }
+.ticker { background:var(--orange); color:var(--paper); overflow:hidden; white-space:nowrap; padding:15px 0; transform:rotate(-1.5deg) scale(1.02); }
+.ticker-track { display:flex; align-items:center; justify-content:space-around; gap:32px; min-width:1000px; font:800 15px 'DM Sans'; letter-spacing:2px; }
+.ticker b { color:var(--yellow); font-size:20px; }
+.section { padding:105px 12%; }
+.section-label { color:var(--orange); margin-bottom:34px; }
+.good-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:9%; align-items:center; }
+h2 { font-size:clamp(42px,6vw,76px); line-height:.98; letter-spacing:-.07em; margin:0; font-weight:800; }
+h2 em { color:var(--blue); font-family:'Playfair Display',serif; letter-spacing:-.06em; }
+.good-copy p { font-size:14px; line-height:1.9; max-width:430px; }
+.scribble { display:inline-block; color:var(--orange); border:1px solid var(--orange); border-radius:50%; padding:13px 18px; font:500 11px 'DM Mono'; transform:rotate(-7deg); margin-top:12px; }
+.scribble span { font-size:17px; }
+.taste { background:#e6e9f5; }
+.taste h2 em { color:var(--orange); }
+.taste-sub { font-size:13px; margin:17px 0 35px; color:#55576a; }
+.taste-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+.taste-card { min-height:330px; position:relative; padding:24px; overflow:hidden; }
+.pizza-card { background:var(--yellow); }
+.dosa-card { background:var(--pink); }
+.card-index { position:relative; z-index:1; }
+.food-art { position:absolute; font-size:145px; right:13%; top:42px; transform:rotate(-12deg); filter:drop-shadow(8px 12px 0 #20201d20); }
+.dosa-card .food-art { transform:rotate(12deg); }
+.food-word { position:absolute; bottom:54px; left:24px; font-size:clamp(50px,7vw,90px); font-weight:800; letter-spacing:-.09em; line-height:.8; }
+.food-caption { position:absolute; bottom:24px; left:26px; font-size:11px; }
+.card-doodle { position:absolute; right:20px; bottom:70px; font:500 10px/1.5 'DM Mono'; text-align:center; transform:rotate(9deg); }
+.closing { text-align:center; position:relative; padding-top:115px; padding-bottom:120px; }
+.closing .section-label { margin-bottom:25px; }
+.closing h2 { font-size:clamp(48px,7vw,88px); }
+.closing h2 em { color:var(--orange); }
+.closing > p:not(.section-label) { max-width:480px; margin:25px auto 32px; font-size:14px; line-height:1.9; }
+.closing-star { color:var(--yellow); font-size:70px; margin-bottom:25px; text-shadow:2px 2px var(--ink); }
+.closing-sign { display:inline-block; padding:14px 19px; border:1px solid var(--ink); transform:rotate(-2deg); }
+.closing-sign span { color:var(--orange); font-size:17px; margin-left:9px; }
+footer { padding:22px 5%; border-top:1px solid #20201d30; display:flex; justify-content:space-between; color:#6e695f; font-size:9px; }
+.confetti-button { position:fixed; bottom:22px; right:22px; width:52px; height:52px; border:0; border-radius:50%; background:var(--orange); color:white; font-size:25px; cursor:pointer; box-shadow:3px 4px 0 var(--ink); z-index:5; transition:transform .2s; }
+.confetti-button:hover { transform:rotate(45deg) scale(1.08); }
+.toast { position:fixed; bottom:88px; right:22px; background:var(--ink); color:white; padding:13px 17px; font-size:12px; opacity:0; transform:translateY(10px); transition:.3s; z-index:5; pointer-events:none; }
+.toast.show { opacity:1; transform:translateY(0); }
+.confetti-piece { position:fixed; z-index:30; pointer-events:none; font-size:20px; animation:fly 1.5s ease-out forwards; }
+@keyframes fly { to { transform:translate(var(--dx),var(--dy)) rotate(500deg) scale(.3); opacity:0; } }
+@media(max-width:700px) {
+ .top { height:65px; padding:0 5%; } .top-note { display:none; }
+ .hero { min-height:760px; padding:42px 7% 45px; }
+ .hero-title-wrap { margin:65px 0 0 0; }
+ h1 { font-size:clamp(84px,22vw,135px); }
+ .year-burst { right:-88px; top:-55px; width:85px; height:85px; font-size:8px; }
+ .hero-description { margin:35px 0 0; width:min(90%,340px); }
+ .scroll-cue { margin-left:0; }
+ .sticker-cake { right:18%; top:auto; bottom:16%; width:90px; height:90px; font-size:40px; }
+ .sticker-star { right:7%; top:auto; bottom:25%; font-size:60px; }
+ .sticker-doodle { right:37%; bottom:4%; width:78px; height:78px; font-size:9px; }
+ .food-sticker.pizza { right:5%; top:43%; } .food-sticker.dosa { right:5%; bottom:5%; }
+ .hero-side-note { display:none; }
+ .section { padding:75px 7%; }
+ .good-grid { grid-template-columns:1fr; gap:25px; }
+ .taste-grid { grid-template-columns:1fr; }
+ .taste-card { min-height:285px; }
+ .food-art { font-size:120px; }
+ footer { flex-wrap:wrap; gap:12px; justify-content:center; text-align:center; }
+}
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; transition-duration:.01ms!important; } }
